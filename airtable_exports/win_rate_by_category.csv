@@ -1,0 +1,7 @@
+category,model_a_wins,model_b_wins,ties,total_in_category
+account_access,5,2,4,11
+other,6,9,4,19
+payments_billing,9,2,1,12
+product_quality,3,1,1,5
+returns_refunds,9,5,10,24
+shipping_delivery,10,9,10,29

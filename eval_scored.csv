@@ -1,4 +1,4 @@
-ID,prompt,category,prompt_contextual,prompt_normalized,model_a,model_b,response_model_a,response_model_b,correctness_a,helpfulness_a,tone_a,conciseness_a,correctness_b,helpfulness_b,tone_b,conciseness_b,win_reason
+ID,prompt,category,prompt_contextual,prompt_normalized,model_a,model_b,response_model_a,response_model_b,correctness_a,helpfulness_a,tone_a,conciseness_a,correctness_b,helpfulness_b,tone_b,conciseness_b,win_reason,model_winner
 1,"My order hasn’t arrived yet, what do I do?",shipping_delivery,"Customer: My order hasn’t arrived yet, what do I do?
 
 Agent: I am sorry you are dealing with this. I can help check next steps.
@@ -29,7 +29,7 @@ To check on your order status and determine the best next steps, I'll need a few
 
 Once I have this information, I can look up your specific order, see where it is in our system, and provide you with concrete options - whether that's tracking down the shipment, arranging a replacement, or processing a refund if appropriate.
 
-What's the order number or email address I can use to locate your order",2,5,4,4,2,5,4,3,More Concise
+What's the order number or email address I can use to locate your order",2,5,4,4,2,5,4,3,More Concise,Model A
 2,"My package is delayed, can you check the status?",shipping_delivery,"Customer: My package is delayed, can you check the status?
 
 Agent: I am sorry you are dealing with this. I can help check next steps.
@@ -57,7 +57,7 @@ To check your package status and determine the best next steps, I'll need your t
 - Provide you with an updated delivery estimate
 - Explore options like expedited shipping or other solutions if needed
 
-Could you please share your tracking or order number with me?",2,5,4,4,2,5,4,4,More Accurate
+Could you please share your tracking or order number with me?",2,5,4,4,2,5,4,4,More Accurate,Tie
 3,It says delivered but I never received my order,shipping_delivery,"Customer: It says delivered but I never received my order
 
 Agent: I am sorry you are dealing with this. I can help check next steps.
@@ -85,7 +85,7 @@ Could you please provide me with:
 - The delivery address on the order
 - The date it was marked as delivered
 
-Once I have this information, I can check the tracking details, contact the carrier if needed, and determine the best resolution for you - whether that's a replacement, refund, or other solution.",2,5,4,4,2,5,4,5,More Concise
+Once I have this information, I can check the tracking details, contact the carrier if needed, and determine the best resolution for you - whether that's a replacement, refund, or other solution.",2,5,4,4,2,5,4,5,More Concise,Model B
 4,How long does shipping usually take?,shipping_delivery,"Customer: How long does shipping usually take?
 
 Agent: I am sorry you are dealing with this. I can help check next steps.
@@ -115,7 +115,7 @@ Here's how the agent should respond to the shipping question:
 
 Then, for the customer's follow-up about troubleshooting, the agent should clarify:
 
-**",2,5,1,3,2,5,1,3,More Accurate
+**",2,5,1,3,2,5,1,3,More Accurate,Tie
 5,Can I change my shipping address after placing an order?,shipping_delivery,"Customer: Can I change my shipping address after placing an order?
 
 Agent: I am sorry you are dealing with this. I can help check next steps.
@@ -142,7 +142,7 @@ A more appropriate response from the agent would be:
 
 ""I'd be happy to help you change your shipping address! Let me check the status of your order first. Can you please provide me with your order number? Depending on whether your order has already been processed or shipped, I may be able to update the address for you.""
 
-The customer's follow-up about troubleshooting seems to be responding to the agent's mismatched response, when what they actually need is assistance with address modification logistics.",2,5,4,3,2,5,1,3,Better Tone
+The customer's follow-up about troubleshooting seems to be responding to the agent's mismatched response, when what they actually need is assistance with address modification logistics.",2,5,4,3,2,5,1,3,Better Tone,Model A
 6,My tracking number isn’t working,shipping_delivery,"Customer: My tracking number isn’t working
 
 Agent: I am sorry you are dealing with this. I can help check next steps.
@@ -165,7 +165,7 @@ With this information, I can either:
 
 What details can","I understand you've already done troubleshooting on your end. Let me help you get this resolved right away.
 
-Could you please share your tracking number with me? I'll look it up in our system to see what's happening and determine the best next steps for you.",2,5,4,2,1,4,4,5,More Concise
+Could you please share your tracking number with me? I'll look it up in our system to see what's happening and determine the best next steps for you.",2,5,4,2,1,4,4,5,More Concise,Model B
 7,Why is my order taking so long to ship?,shipping_delivery,"Customer: Why is my order taking so long to ship?
 
 Agent: I am sorry you are dealing with this. I can help check next steps.
@@ -192,7 +192,7 @@ To check the status and identify what's causing the delay, I'll need your order 
 - Provide you with an updated delivery timeline
 - Explore options to expedite if possible
 
-Could you please share your order number so I can investigate this for you immediately?",2,5,1,4,2,5,4,4,Better Tone
+Could you please share your order number so I can investigate this for you immediately?",2,5,1,4,2,5,4,4,Better Tone,Model B
 8,I paid for express shipping but it’s late,shipping_delivery,"Customer: I paid for express shipping but it’s late
 
 Agent: I am sorry you are dealing with this. I can help check next steps.
@@ -219,7 +219,7 @@ What information can you share?","I understand your frustration with the late ex
 
 Could you please provide me with your order number so I can track the package and see what happened with the delivery? I'll also be able to check what options we have to resolve this, which may include a refund of the express shipping fee or other compensation for the delay.
 
-In the meantime, I want to assure you that we take our shipping commitments seriously, and I'll work to make this right for you.",2,5,4,3,2,5,4,4,More Concise
+In the meantime, I want to assure you that we take our shipping commitments seriously, and I'll work to make this right for you.",2,5,4,3,2,5,4,4,More Concise,Model B
 9,My order is stuck in transit,shipping_delivery,"Customer: My order is stuck in transit
 
 Agent: I am sorry you are dealing with this. I can help check next steps.
@@ -242,7 +242,7 @@ Once I have these details, I can:
 - Check for any holds or issues
 - Explore options like filing a claim or arranging a replacement/refund if needed
 
-What information can you",I understand your frustration. Let me look into your specific order right away. Could you please provide your order number so I can check the current status and tracking details? I'll also be able to see what shipping method was used and contact the carrier directly if needed to get this resolved for you.,2,5,4,2,2,4,4,5,More Concise
+What information can you",I understand your frustration. Let me look into your specific order right away. Could you please provide your order number so I can check the current status and tracking details? I'll also be able to see what shipping method was used and contact the carrier directly if needed to get this resolved for you.,2,5,4,2,2,4,4,5,More Concise,Model B
 10,Can I pick up my order instead of delivery?,shipping_delivery,"Customer: Can I pick up my order instead of delivery?
 
 Agent: I am sorry you are dealing with this. I can help check next steps.
@@ -261,7 +261,7 @@ A more appropriate response from the agent would be something like:
 
 ""Absolutely! I'd be happy to help you arrange pickup for your order. Let me look up your order details and find the nearest pickup location for you. Can you please provide your order number?""
 
-The customer's second message about troubleshooting suggests they may be confused by the agent's response as well, since their original question was about pickup options, not a technical issue.",2,5,4,5,2,5,1,3,Better Tone
+The customer's second message about troubleshooting suggests they may be confused by the agent's response as well, since their original question was about pickup options, not a technical issue.",2,5,4,5,2,5,1,3,Better Tone,Model A
 11,I received only part of my order,shipping_delivery,"Customer: I received only part of my order
 
 Agent: I am sorry you are dealing with this. I can help check next steps.
@@ -293,7 +293,7 @@ To assist you with your partial order, I'll need to:
 
 Once I have your order number, I can immediately see what happened with your shipment and determine the best solution - whether that's expediting the missing items, providing a refund, or other options to make this right for you.
 
-What's your order number so I can get started on resol",2,5,4,2,2,5,4,2,More Accurate
+What's your order number so I can get started on resol",2,5,4,2,2,5,4,2,More Accurate,Tie
 12,My package was damaged during delivery,shipping_delivery,"Customer: My package was damaged during delivery
 
 Agent: I am sorry you are dealing with this. I can help check next steps.
@@ -326,7 +326,7 @@ Would you like","I understand you've already tried troubleshooting steps. For a 
 3. **File a damage claim** - I can initiate this process with our shipping carrier
 4. **Arrange replacement or refund** - Depending on the item and availability
 
-To get started, could you please provide your order number? This will help me pull up the specifics and determine the best resolution for your particular situation.",2,5,4,3,2,5,4,2,More Concise
+To get started, could you please provide your order number? This will help me pull up the specifics and determine the best resolution for your particular situation.",2,5,4,3,2,5,4,2,More Concise,Model A
 13,The courier says delivered but I don’t see it,shipping_delivery,"Customer: The courier says delivered but I don’t see it
 
 Agent: I am sorry you are dealing with this. I can help check next steps.
@@ -355,7 +355,7 @@ I can:
 - Start a delivery investigation if needed
 - Look into replacement or refund options depending on what we find
 
-To get started, could you please provide me with your tracking number or order number? This will help me pull up the specific delivery details and see what options are available for your situation.",2,5,4,4,2,5,4,2,More Concise
+To get started, could you please provide me with your tracking number or order number? This will help me pull up the specific delivery details and see what options are available for your situation.",2,5,4,4,2,5,4,2,More Concise,Model A
 14,Can you resend my package?,shipping_delivery,"Customer: Can you resend my package?
 
 Agent: I am sorry you are dealing with this. I can help check next steps.
@@ -376,7 +376,7 @@ Could you please provide:
 - Your order number or tracking number
 - The email address associated with your order
 
-Once I have this information, I can check the status of your original shipment and arrange for a replacement package to be sent out.",2,5,4,4,2,5,4,4,More Accurate
+Once I have this information, I can check the status of your original shipment and arrange for a replacement package to be sent out.",2,5,4,4,2,5,4,4,More Accurate,Tie
 15,My order was canceled without notice,shipping_delivery,"Customer: My order was canceled without notice
 
 Agent: I am sorry you are dealing with this. I can help check next steps.
@@ -407,7 +407,7 @@ To better assist you, could you please provide:
 
 Once I have this information, I can look into why the cancellation occurred and what options we have to either restore your original order or place a new one with the same items. I'll also make sure you receive proper communication about any order status changes going forward.
 
-What troubleshooting steps have you already tried? This will help me avoid suggesting anything you've already",2,5,4,2,2,5,4,2,More Accurate
+What troubleshooting steps have you already tried? This will help me avoid suggesting anything you've already",2,5,4,2,2,5,4,2,More Accurate,Tie
 16,I accidentally entered the wrong address,other,"Customer: I accidentally entered the wrong address
 
 Agent: I am sorry you are dealing with this. I can help check next steps.
@@ -437,7 +437,7 @@ To assist you most effectively, I'll need a few details:
 1. Is this for an existing order that hasn't shipped yet, or one that's already in transit?
 2. What type of address correction do you need - shipping, billing, or account address?
 
-Once I know these details, I can walk you through the specific steps to get this resolved for you.",2,5,4,3,2,5,4,4,More Concise
+Once I know these details, I can walk you through the specific steps to get this resolved for you.",2,5,4,3,2,5,4,4,More Concise,Model B
 17,Can you expedite my shipment?,shipping_delivery,"Customer: Can you expedite my shipment?
 
 Agent: I am sorry you are dealing with this. I can help check next steps.
@@ -466,7 +466,7 @@ A more appropriate agent response to the shipment question might be:
 
 ""I'd be happy to help you with expediting your shipment. Let me look up your order details. Can you please provide your order number so I can check what shipping options are available?""
 
-Then when the customer mentions troubleshooting, the agent could clarify what specific issue they're experiencing to provide the right assistance.",2,5,4,2,2,5,1,2,Better Tone
+Then when the customer mentions troubleshooting, the agent could clarify what specific issue they're experiencing to provide the right assistance.",2,5,4,2,2,5,1,2,Better Tone,Model A
 18,My delivery date keeps changing,shipping_delivery,"Customer: My delivery date keeps changing
 
 Agent: I am sorry you are dealing with this. I can help check next steps.
@@ -491,7 +491,7 @@ To best assist you, I'll need to look into your specific order details. Could yo
 - The original delivery date you were given
 - How many times the date has changed and what the current expected date is
 
-Once I have this information, I can investigate what's causing these delays and work on getting you a firm, reliable delivery date. I'll also check if there are any expedited shipping options available to help make up for the inconvenience you've experienced.",2,5,4,2,2,5,4,2,More Accurate
+Once I have this information, I can investigate what's causing these delays and work on getting you a firm, reliable delivery date. I'll also check if there are any expedited shipping options available to help make up for the inconvenience you've experienced.",2,5,4,2,2,5,4,2,More Accurate,Tie
 19,I need my order before a specific date,shipping_delivery,"Customer: I need my order before a specific date
 
 Agent: I am sorry you are dealing with this. I can help check next steps.
@@ -519,7 +519,7 @@ A more appropriate agent response to the original request might be:
 
 ""I'd be happy to help you with your delivery timing! Could you please provide me with your order number and the date you need it by? I'll check the current status and see what shipping options are available to meet your deadline.""
 
-Would you like me to help develop a better response flow for this customer interaction?",2,5,4,4,2,5,1,2,Better Tone
+Would you like me to help develop a better response flow for this customer interaction?",2,5,4,4,2,5,1,2,Better Tone,Model A
 20,Why haven’t I received a shipping confirmation?,shipping_delivery,"Customer: Why haven’t I received a shipping confirmation?
 
 Agent: I am sorry you are dealing with this. I can help check next steps.
@@ -550,7 +550,7 @@ To check your shipping status, I'll need:
 
 Once I have this information, I can see exactly where your order is in our fulfillment process and provide you with a clear timeline for when you should expect your shipping confirmation.
 
-Is there anything specific about the timing that's concerning you? For example, was this an expedited order or do you need it by a certain date?",2,5,4,2,2,5,4,4,More Concise
+Is there anything specific about the timing that's concerning you? For example, was this an expedited order or do you need it by a certain date?",2,5,4,2,2,5,4,4,More Concise,Model B
 21,My order is marked as returned to sender,shipping_delivery,"Customer: My order is marked as returned to sender
 
 Agent: I am sorry you are dealing with this. I can help check next steps.
@@ -583,7 +583,7 @@ To investigate what happened with your returned package and determine the best s
 
 Once I have this information, I can see exactly what caused the return, track down where your package currently is, and discuss options like reshipping to the same address, updating the delivery address, or processing a refund if preferred.
 
-What would you like me to look up first?",2,5,4,4,2,5,4,2,More Concise
+What would you like me to look up first?",2,5,4,4,2,5,4,2,More Concise,Model A
 22,Can I track my order in real-time?,shipping_delivery,"Customer: Can I track my order in real-time?
 
 Agent: I am sorry you are dealing with this. I can help check next steps.
@@ -613,7 +613,7 @@ A more appropriate agent response would be:
 
 ""Yes, you can track your order in real-time! Once your order ships, you'll receive a tracking number via email. You can use this number on our website's order tracking page or the carrier's website to see real-time updates on your package's location and estimated delivery time. Would you like me to help you locate your tracking information?""
 
-The customer's follow-up about troubleshooting suggests they may be confused by the agent's initial response, since they were",2,5,1,2,2,5,1,2,More Accurate
+The customer's follow-up about troubleshooting suggests they may be confused by the agent's initial response, since they were",2,5,1,2,2,5,1,2,More Accurate,Tie
 23,I never got a confirmation email,other,"Customer: I never got a confirmation email
 
 Agent: I am sorry you are dealing with this. I can help check next steps.
@@ -637,7 +637,7 @@ Could you please provide me with:
 - Approximately when you were expecting to receive the confirmation email
 - Your order number if you have it
 
-I'll check our system to see what happened with your confirmation email and can resend it immediately once I locate your information.",2,3,4,4,2,5,4,4,More Helpful
+I'll check our system to see what happened with your confirmation email and can resend it immediately once I locate your information.",2,3,4,4,2,5,4,4,More Helpful,Model B
 24,"My package is lost, what now?",shipping_delivery,"Customer: My package is lost, what now?
 
 Agent: I am sorry you are dealing with this. I can help check next steps.
@@ -674,7 +674,7 @@ Based on this information, I can help you:
 - Contact the sender to initiate a replacement or refund
 - Escalate the case if needed
 
-What's your tracking number so",2,5,4,2,2,5,4,2,More Accurate
+What's your tracking number so",2,5,4,2,2,5,4,2,More Accurate,Tie
 25,Can you ship internationally?,shipping_delivery,"Customer: Can you ship internationally?
 
 Agent: I am sorry you are dealing with this. I can help check next steps.
@@ -695,7 +695,7 @@ A more appropriate response to the shipping question would be:
 
 ""Yes, we do offer international shipping to many countries. Shipping costs and delivery times vary by location. Could you let me know which country you'd like to ship to so I can provide you with specific details about available options and pricing?""
 
-The agent should address the actual question being asked rather than assuming it's a technical support issue.",2,5,1,4,2,5,1,2,More Concise
+The agent should address the actual question being asked rather than assuming it's a technical support issue.",2,5,1,4,2,5,1,2,More Concise,Model A
 26,I want a refund for a defective product,returns_refunds,"Customer: I want a refund for a defective product
 
 Agent: I am sorry you are dealing with this. I can help check next steps.
@@ -719,7 +719,7 @@ Once I have this information, I can move forward with your refund request right 
 2. What specific issue are you experiencing with the product?
 3. When did you purchase the item?
 
-Once I have this information, I can review your case and explain the available options for your refund request. I want to make sure we resolve this for you as quickly as possible.",2,5,4,4,2,5,4,4,More Accurate
+Once I have this information, I can review your case and explain the available options for your refund request. I want to make sure we resolve this for you as quickly as possible.",2,5,4,4,2,5,4,4,More Accurate,Tie
 27,How do I return an item?,returns_refunds,"Customer: How do I return an item?
 
 Agent: I am sorry you are dealing with this. I can help check next steps.
@@ -743,7 +743,7 @@ Once I have these details, I can walk you through the return process and get thi
 2. When was it purchased?
 3. What's the reason for the return (defective, wrong item, changed mind, etc.)?
 
-Once I have this information, I can walk you through the specific return steps and let you know about any applicable return policies or timeframes.",2,5,4,4,2,5,4,4,More Accurate
+Once I have this information, I can walk you through the specific return steps and let you know about any applicable return policies or timeframes.",2,5,4,4,2,5,4,4,More Accurate,Tie
 28,What is your return policy?,returns_refunds,"Customer: What is your return policy?
 
 Agent: I am sorry you are dealing with this. I can help check next steps.
@@ -772,7 +772,7 @@ Here's how the agent should have responded to the initial question:
 
 **Agent:** ""I'd be happy to help you with information about our return policy. [Insert specific return policy details - timeframe, conditions, process, etc.]. Do you have a specific item you're looking to return, or would you like me to walk you through the return process?""
 
-The agent should focus on directly answering the customer's actual question about returns rather than assuming they have a technical problem. Would you like me to help draft a proper response",2,5,4,2,2,5,1,1,Better Tone
+The agent should focus on directly answering the customer's actual question about returns rather than assuming they have a technical problem. Would you like me to help draft a proper response",2,5,4,2,2,5,1,1,Better Tone,Model A
 29,My refund hasn’t been processed yet,returns_refunds,"Customer: My refund hasn’t been processed yet
 
 Agent: I am sorry you are dealing with this. I can help check next steps.
@@ -799,7 +799,7 @@ To check on the status of your refund, I'll need a few details:
 - The date you requested the refund
 - The original payment method used
 
-Once I have this information, I can track exactly where your refund is in the process and provide you with a specific timeline or next steps to get this resolved for you.",2,5,4,3,2,5,4,4,More Concise
+Once I have this information, I can track exactly where your refund is in the process and provide you with a specific timeline or next steps to get this resolved for you.",2,5,4,3,2,5,4,4,More Concise,Model B
 30,I returned my item but haven’t gotten my money,returns_refunds,"Customer: I returned my item but haven’t gotten my money
 
 Agent: I am sorry you are dealing with this. I can help check next steps.
@@ -828,7 +828,7 @@ To check on your refund status, I'll need a few details:
 - When did you return the item?
 - What return method did you use (mail, in-store, pickup)?
 
-Once I have this information, I can look up your specific return and see exactly where your refund stands in our system, including the expected timeline for processing.",2,5,4,4,2,5,4,4,More Accurate
+Once I have this information, I can look up your specific return and see exactly where your refund stands in our system, including the expected timeline for processing.",2,5,4,4,2,5,4,4,More Accurate,Tie
 31,Can I exchange instead of refund?,returns_refunds,"Customer: Can I exchange instead of refund?
 
 Agent: I am sorry you are dealing with this. I can help check next steps.
@@ -852,7 +852,7 @@ To process this for you, I'll need a few details:
 - What issue are you experiencing with it?
 - What would you like to exchange it for (same item, different size/color, or different product)?
 
-Once I have these details, I can walk you through the exchange process and any options available to you.",2,5,4,4,2,5,4,4,More Accurate
+Once I have these details, I can walk you through the exchange process and any options available to you.",2,5,4,4,2,5,4,4,More Accurate,Tie
 32,The return label isn’t working,returns_refunds,"Customer: The return label isn’t working
 
 Agent: I am sorry you are dealing with this. I can help check next steps.
@@ -877,7 +877,7 @@ Once I have these details, I can look into getting you a working replacement lab
 
 3. How long ago did you receive the return label?
 
-With these details, I can look into your specific situation and get you a solution right away.",2,5,4,4,2,5,4,4,More Accurate
+With these details, I can look into your specific situation and get you a solution right away.",2,5,4,4,2,5,4,4,More Accurate,Tie
 33,How long do refunds take?,returns_refunds,"Customer: How long do refunds take?
 
 Agent: I am sorry you are dealing with this. I can help check next steps.
@@ -898,7 +898,7 @@ A more appropriate response would be:
 
 ""I'd be happy to help you with information about your refund. Refund processing times typically take 3-5 business days to appear on your statement, though it can vary depending on your payment method. Would you like me to look up the status of a specific refund for you?""
 
-The customer's follow-up about troubleshooting confirms they're confused by the agent's initial response, since refund inquiries don't typically involve troubleshooting steps.",2,5,4,4,2,5,1,2,Better Tone
+The customer's follow-up about troubleshooting confirms they're confused by the agent's initial response, since refund inquiries don't typically involve troubleshooting steps.",2,5,4,4,2,5,1,2,Better Tone,Model A
 34,"I received the wrong item, can I return it?",returns_refunds,"Customer: I received the wrong item, can I return it?
 
 Agent: I am sorry you are dealing with this. I can help check next steps.
@@ -925,7 +925,7 @@ A more appropriate response from the agent would be:
 
 ""I apologize for the mix-up with your order. Since you received the wrong item, I'd be happy to help you with a return or exchange. Let me look up your order details so we can get this resolved quickly for you. Can you please provide your order number?""
 
-This addresses the actual issue (wrong item received) rather than suggesting troubleshooting steps, which would be more appropriate for a defective product rather than an incorrect ship",2,5,4,4,2,5,4,3,More Concise
+This addresses the actual issue (wrong item received) rather than suggesting troubleshooting steps, which would be more appropriate for a defective product rather than an incorrect ship",2,5,4,4,2,5,4,3,More Concise,Model A
 35,Do I have to pay for return shipping?,shipping_delivery,"Customer: Do I have to pay for return shipping?
 
 Agent: I am sorry you are dealing with this. I can help check next steps.
@@ -951,7 +951,7 @@ Once I know more details, I can confirm what applies to your situation and eithe
 - What specific problem are you experiencing?
 - How long ago did you purchase the item?
 
-This information will help me check our return policy for your situation and see if there are any additional troubleshooting steps that might resolve the issue before needing to return anything.",2,5,4,3,2,5,4,4,More Concise
+This information will help me check our return policy for your situation and see if there are any additional troubleshooting steps that might resolve the issue before needing to return anything.",2,5,4,3,2,5,4,4,More Concise,Model B
 36,"My return was rejected, why?",returns_refunds,"Customer: My return was rejected, why?
 
 Agent: I am sorry you are dealing with this. I can help check next steps.
@@ -973,7 +973,7 @@ With this information, I'll be able to investigate what happened and explore sol
 - The reason given for the rejection (if any was provided)
 - What item(s) you were trying to return
 
-Once I have this information, I can look into why the return was rejected and work with you to find a solution, whether that's reprocessing the return, providing additional options, or escalating to our returns team if needed.",2,5,4,4,2,5,4,4,More Accurate
+Once I have this information, I can look into why the return was rejected and work with you to find a solution, whether that's reprocessing the return, providing additional options, or escalating to our returns team if needed.",2,5,4,4,2,5,4,4,More Accurate,Tie
 37,Can I return an item after 30 days?,returns_refunds,"Customer: Can I return an item after 30 days?
 
 Agent: I am sorry you are dealing with this. I can help check next steps.
@@ -1007,7 +1007,7 @@ Let me help clarify the return policy question: Most standard return policies ar
 To give you the most accurate information, could you tell me:
 1. What type of item you're looking to return?
 2. How long ago was it purchased?
-3. What's the",2,5,4,4,2,3,1,2,Better Tone
+3. What's the",2,5,4,4,2,3,1,2,Better Tone,Model A
 38,"I lost my receipt, can I still return?",returns_refunds,"Customer: I lost my receipt, can I still return?
 
 Agent: I am sorry you are dealing with this. I can help check next steps.
@@ -1038,7 +1038,7 @@ A more appropriate response to their return question might be:
 
 ""I understand you'd like to return an item but don't have your receipt. Let me help you with that. I can look up your purchase using your credit card, phone number, or email address if you paid with a card or are in our rewards program. What information do you have available, and can you tell me more about the item you'd like to return?""
 
-This addresses their actual concern about returns policy and next steps for processing",2,5,4,4,2,5,4,2,More Concise
+This addresses their actual concern about returns policy and next steps for processing",2,5,4,4,2,5,4,2,More Concise,Model A
 39,I was refunded the wrong amount,returns_refunds,"Customer: I was refunded the wrong amount
 
 Agent: I am sorry you are dealing with this. I can help check next steps.
@@ -1065,7 +1065,7 @@ To look into this for you, I'll need to pull up the details of your refund. Coul
 - The amount you were refunded vs. the amount you expected
 - The approximate date the refund was processed
 
-Once I have these details, I can investigate what happened and work on getting you the correct refund amount.",2,5,4,4,2,5,4,4,More Accurate
+Once I have these details, I can investigate what happened and work on getting you the correct refund amount.",2,5,4,4,2,5,4,4,More Accurate,Tie
 40,Can I cancel my return request?,returns_refunds,"Customer: Can I cancel my return request?
 
 Agent: I am sorry you are dealing with this. I can help check next steps.
@@ -1088,7 +1088,7 @@ Let me suggest a more appropriate response:
 
 ""I'd be happy to help you cancel your return request. Let me look that up for you. Can you please provide me with your order number or return authorization number so I can locate your return in our system?""
 
-This directly addresses their question about canceling a return and asks for the information needed to assist them properly.",2,5,4,3,2,5,1,3,Better Tone
+This directly addresses their question about canceling a return and asks for the information needed to assist them properly.",2,5,4,3,2,5,1,3,Better Tone,Model A
 41,"I returned multiple items, where is my refund?",returns_refunds,"Customer: I returned multiple items, where is my refund?
 
 Agent: I am sorry you are dealing with this. I can help check next steps.
@@ -1115,7 +1115,7 @@ To locate your refund and determine the status, I'll need to pull up your accoun
 - The email address associated with your account
 - Approximately when you returned the items
 
-Once I have this information, I can check the processing status of each return and provide you with specific timelines or next steps to expedite your refund.",2,5,4,4,2,5,4,4,More Accurate
+Once I have this information, I can check the processing status of each return and provide you with specific timelines or next steps to expedite your refund.",2,5,4,4,2,5,4,4,More Accurate,Tie
 42,Can I return a used product?,returns_refunds,"Customer: Can I return a used product?
 
 Agent: I am sorry you are dealing with this. I can help check next steps.
@@ -1136,7 +1136,7 @@ Once I understand the situation better, I can let you know about return options,
 2. What type of product is it?
 3. What issue are you experiencing with it?
 
-Once I have this information, I can let you know what return options are available and guide you through the next steps.",2,5,4,4,2,5,4,4,More Accurate
+Once I have this information, I can let you know what return options are available and guide you through the next steps.",2,5,4,4,2,5,4,4,More Accurate,Tie
 43,"The item arrived damaged, can I get a refund?",shipping_delivery,"Customer: The item arrived damaged, can I get a refund?
 
 Agent: I am sorry you are dealing with this. I can help check next steps.
@@ -1166,7 +1166,7 @@ For a damaged item, I can process a refund for you right away. I'll just need:
 
 Once I have that information, I can initiate the refund process immediately. You'll receive a confirmation email with the details, and the refund should appear in your original payment method within 3-5 business days.
 
-Would you like me to also arrange for the damaged item to be picked up, or would you prefer to keep it?",2,5,4,4,2,5,4,4,More Accurate
+Would you like me to also arrange for the damaged item to be picked up, or would you prefer to keep it?",2,5,4,4,2,5,4,4,More Accurate,Tie
 44,"I was charged a restocking fee, why?",returns_refunds,"Customer: I was charged a restocking fee, why?
 
 Agent: I am sorry you are dealing with this. I can help check next steps.
@@ -1196,7 +1196,7 @@ Once I have","I understand your frustration about the restocking fee. To better 
 2. What item you returned and when
 3. The reason for your return
 
-This will help me review the specifics of your case and determine if the restocking fee was applied correctly according to our return policy. I want to make sure we resolve this for you properly.",2,5,4,3,2,5,4,4,More Concise
+This will help me review the specifics of your case and determine if the restocking fee was applied correctly according to our return policy. I want to make sure we resolve this for you properly.",2,5,4,3,2,5,4,4,More Concise,Model B
 45,Can I get store credit instead?,other,"Customer: Can I get store credit instead?
 
 Agent: I am sorry you are dealing with this. I can help check next steps.
@@ -1222,7 +1222,7 @@ To process store credit, I'll need to:
 - Confirm the item and issue you're experiencing
 - Check our store credit policy for your specific situation
 
-Could you please provide your order number or receipt information? This will help me determine the best way to resolve this for you quickly.",2,5,4,3,2,5,4,4,More Concise
+Could you please provide your order number or receipt information? This will help me determine the best way to resolve this for you quickly.",2,5,4,3,2,5,4,4,More Concise,Model B
 46,My refund is taking too long,returns_refunds,"Customer: My refund is taking too long
 
 Agent: I am sorry you are dealing with this. I can help check next steps.
@@ -1247,7 +1247,7 @@ To check on your refund status and determine the best next steps, I'll need:
 - When you initially requested the refund
 - The refund method you selected (original payment method, store credit, etc.)
 
-Once I have these details, I can look into what's causing the delay and either expedite the process or provide you with a specific timeline for completion.",2,5,4,4,2,5,4,4,More Accurate
+Once I have these details, I can look into what's causing the delay and either expedite the process or provide you with a specific timeline for completion.",2,5,4,4,2,5,4,4,More Accurate,Tie
 47,I want to return a gift,returns_refunds,"Customer: I want to return a gift
 
 Agent: I am sorry you are dealing with this. I can help check next steps.
@@ -1275,7 +1275,7 @@ To get started, could you please provide me with:
 3. The reason for the return (defective, wrong size, changed mind, etc.)
 4. How long ago the item was purchased
 
-This information will help me check our return policy for your specific situation and guide you through the next steps.",2,5,4,3,2,5,4,4,More Concise
+This information will help me check our return policy for your specific situation and guide you through the next steps.",2,5,4,3,2,5,4,4,More Concise,Model B
 48,Can I return without original packaging?,returns_refunds,"Customer: Can I return without original packaging?
 
 Agent: I am sorry you are dealing with this. I can help check next steps.
@@ -1296,7 +1296,7 @@ Could you help me clarify what you're looking to do today? Are you:
 - Looking to return a product that you no longer have the original packaging for, OR
 - Seeking help with troubleshooting a product issue?
 
-Once I understand your main concern, I'll be happy to provide the most relevant assistance for your situation.",2,5,4,3,2,3,4,4,More Helpful
+Once I understand your main concern, I'll be happy to provide the most relevant assistance for your situation.",2,5,4,3,2,3,4,4,More Helpful,Model A
 49,I accidentally returned the wrong item,returns_refunds,"Customer: I accidentally returned the wrong item
 
 Agent: I am sorry you are dealing with this. I can help check next steps.
@@ -1322,7 +1322,7 @@ Once I have these details, I can look into your account and work on:
 2. What item were you originally trying to return?
 3. Do you have your return confirmation number or tracking information?
 
-Once I have these details, I can look into your account and help get the correct item back to you while ensuring the right return is processed.",2,5,4,2,2,5,4,4,More Concise
+Once I have these details, I can look into your account and help get the correct item back to you while ensuring the right return is processed.",2,5,4,2,2,5,4,4,More Concise,Model B
 50,"My refund was denied, what can I do?",returns_refunds,"Customer: My refund was denied, what can I do?
 
 Agent: I am sorry you are dealing with this. I can help check next steps.
@@ -1353,7 +1353,7 @@ Once I have these details, I can look into your case and explore alternative opt
 - Reviewing our return policy exceptions
 - Filing an appeal if the denial was made in error
 
-What information can you share so I can best assist you?",2,5,4,3,2,5,4,2,More Concise
+What information can you share so I can best assist you?",2,5,4,3,2,5,4,2,More Concise,Model A
 51,I was charged twice for my order,shipping_delivery,"Customer: I was charged twice for my order
 
 Agent: I am sorry you are dealing with this. I can help check next steps.
@@ -1384,7 +1384,7 @@ To investigate the double charge thoroughly, I'll need to pull up your order det
 
 Once I have this information, I can see exactly what happened with the billing and get those duplicate charges reversed for you today. In most cases, we can process refunds within 3-5 business days once confirmed.
 
-Is there anything else about this order or the charges that seems unusual that I should be aware of?",2,5,1,2,2,5,4,2,Better Tone
+Is there anything else about this order or the charges that seems unusual that I should be aware of?",2,5,1,2,2,5,4,2,Better Tone,Model B
 52,Why was my card declined?,payments_billing,"Customer: Why was my card declined?
 
 Agent: I am sorry you are dealing with this. I can help check next steps.
@@ -1417,7 +1417,7 @@ Common reasons for declines include:
 - Expired card or incorrect information entered
 - Merchant-specific restrictions
 
-Once I have those details, I can check your account for any holds, restrictions",2,5,4,2,2,5,4,2,More Accurate
+Once I have those details, I can check your account for any holds, restrictions",2,5,4,2,2,5,4,2,More Accurate,Tie
 53,Can I use multiple payment methods?,payments_billing,"Customer: Can I use multiple payment methods?
 
 Agent: I am sorry you are dealing with this. I can help check next steps.
@@ -1447,7 +1447,7 @@ For the original question about multiple payment methods, here's what I'd recomm
 
 The specific options available depend on our current payment policies. Would you like me to walk you through the payment options for your particular purchase?""
 
-If there actually is",2,5,4,2,2,5,1,2,Better Tone
+If there actually is",2,5,4,2,2,5,1,2,Better Tone,Model A
 54,I see an unknown charge from your company,other,"Customer: I see an unknown charge from your company
 
 Agent: I am sorry you are dealing with this. I can help check next steps.
@@ -1477,7 +1477,7 @@ To look into this unknown charge, I'll need to pull up your account details. Cou
 - The last 4 digits of the card that was charged
 - The email address associated with your account (if you have one with us)
 
-Once I have this information, I can investigate the charge and explain what it's for, or help you with next steps if there's been an error.",2,5,4,4,2,5,4,4,More Accurate
+Once I have this information, I can investigate the charge and explain what it's for, or help you with next steps if there's been an error.",2,5,4,4,2,5,4,4,More Accurate,Tie
 55,Can I update my payment method?,payments_billing,"Customer: Can I update my payment method?
 
 Agent: I am sorry you are dealing with this. I can help check next steps.
@@ -1498,7 +1498,7 @@ A more appropriate agent response to ""Can I update my payment method?"" would b
 
 ""Yes, I'd be happy to help you update your payment method. I can walk you through the process or update it for you directly. For security purposes, I'll need to verify your account first. Could you please provide [relevant verification information]?""
 
-Would you like me to suggest how the conversation should continue from this point?",2,5,4,4,2,5,1,2,Better Tone
+Would you like me to suggest how the conversation should continue from this point?",2,5,4,4,2,5,1,2,Better Tone,Model A
 56,My payment didn’t go through but I was charged,payments_billing,"Customer: My payment didn’t go through but I was charged
 
 Agent: I am sorry you are dealing with this. I can help check next steps.
@@ -1529,7 +1529,7 @@ To help resolve this quickly, I'll need to look into your specific transaction. 
 
 I can then check our payment system to see exactly what happened and determine whether this was a temporary authorization that will drop off, or if we need to process a refund. In most cases, we can get this sorted out for you today.
 
-What payment method were you using when this occurred?",2,5,4,4,2,5,4,2,More Concise
+What payment method were you using when this occurred?",2,5,4,4,2,5,4,2,More Concise,Model A
 57,Do you accept PayPal?,payments_billing,"Customer: Do you accept PayPal?
 
 Agent: I am sorry you are dealing with this. I can help check next steps.
@@ -1554,7 +1554,7 @@ A more appropriate response would be:
 
 **Agent:** ""Yes, we do accept PayPal as a payment method. You can select PayPal during checkout, or I can help you set it up for your account if you'd like. Do you have any other questions about our payment options?""
 
-The agent should directly address the payment question rather than assuming there's a technical issue to troubleshoot.",2,3,4,4,2,5,1,2,Better Tone
+The agent should directly address the payment question rather than assuming there's a technical issue to troubleshoot.",2,3,4,4,2,5,1,2,Better Tone,Model A
 58,Can I get an invoice for my purchase?,payments_billing,"Customer: Can I get an invoice for my purchase?
 
 Agent: I am sorry you are dealing with this. I can help check next steps.
@@ -1582,7 +1582,7 @@ A more appropriate response to the customer's invoice request would be something
 
 ""I'd be happy to help you get an invoice for your purchase. Could you please provide me with your order number or the email address associated with the purchase? I can then send you a copy of your invoice right away.""
 
-The customer's follow-up about troubleshooting suggests they may be confused by the agent's initial response, since they weren't reporting a technical issue - they simply wanted their purchase documentation.",2,5,1,4,2,5,1,2,More Concise
+The customer's follow-up about troubleshooting suggests they may be confused by the agent's initial response, since they weren't reporting a technical issue - they simply wanted their purchase documentation.",2,5,1,4,2,5,1,2,More Concise,Model A
 59,Why am I being charged a subscription fee?,payments_billing,"Customer: Why am I being charged a subscription fee?
 
 Agent: I am sorry you are dealing with this. I can help check next steps.
@@ -1612,7 +1612,7 @@ To better assist you, could you please provide:
 3. When you first noticed this charge
 4. Whether you recall signing up for any services recently
 
-I'll also check your account for any active subscriptions and can walk you through how to review or cancel them if needed. We'll make sure you're only being charged for services you actually want to keep.",2,5,4,3,2,5,4,4,More Concise
+I'll also check your account for any active subscriptions and can walk you through how to review or cancel them if needed. We'll make sure you're only being charged for services you actually want to keep.",2,5,4,3,2,5,4,4,More Concise,Model B
 60,I canceled but I’m still being billed,other,"Customer: I canceled but I’m still being billed
 
 Agent: I am sorry you are dealing with this. I can help check next steps.
@@ -1642,7 +1642,7 @@ To investigate this billing issue, I'll need to review your account details. Can
 2. When you canceled the service (approximate date)
 3. How you submitted the cancellation (phone, email, website, etc.)
 
-Once I have this information, I can look into why the billing is continuing and ensure it's stopped immediately. If you've been incorrectly charged, I'll also make sure you receive appropriate credits or refunds.",2,5,4,4,2,5,4,3,More Concise
+Once I have this information, I can look into why the billing is continuing and ensure it's stopped immediately. If you've been incorrectly charged, I'll also make sure you receive appropriate credits or refunds.",2,5,4,4,2,5,4,3,More Concise,Model A
 61,Can I get a receipt emailed to me?,returns_refunds,"Customer: Can I get a receipt emailed to me?
 
 Agent: I am sorry you are dealing with this. I can help check next steps.
@@ -1667,7 +1667,7 @@ You should focus on the customer's actual request about emailing a receipt. A mo
 ""I'd be happy to help you get a receipt emailed! I can send that to you right away. Can you please confirm the email address you'd like me to use?""
 
 **For the Customer:**
-If you do have a separate technical issue that needs troubleshooting, you may want to clarify that as a separate request, or if you only need",2,5,4,4,1,5,1,2,Better Tone
+If you do have a separate technical issue that needs troubleshooting, you may want to clarify that as a separate request, or if you only need",2,5,4,4,1,5,1,2,Better Tone,Model A
 62,My promo code didn’t work,payments_billing,"Customer: My promo code didn’t work
 
 Agent: I am sorry you are dealing with this. I can help check next steps.
@@ -1692,7 +1692,7 @@ To better assist you, could you please provide:
 - What error message (if any) you're seeing when you enter it
 - What you're trying to purchase
 
-I'll check the code's status and see what's preventing it from working properly. We'll get this sorted out for you.",2,5,4,4,1,5,4,4,More Accurate
+I'll check the code's status and see what's preventing it from working properly. We'll get this sorted out for you.",2,5,4,4,1,5,4,4,More Accurate,Model A
 63,I was charged after canceling my order,shipping_delivery,"Customer: I was charged after canceling my order
 
 Agent: I am sorry you are dealing with this. I can help check next steps.
@@ -1722,7 +1722,7 @@ To assist you effectively, I'll need to look into the specific details of your s
 - When did you cancel the order, and do you have a cancellation confirmation?
 - What amount were you charged, and when did the charge appear?
 
-Once I have this information, I can investigate the charge and work on getting this resolved for you promptly. In many cases, we can process a refund or reverse the charge once we identify what happened.",2,5,4,2,2,5,4,2,More Accurate
+Once I have this information, I can investigate the charge and work on getting this resolved for you promptly. In many cases, we can process a refund or reverse the charge once we identify what happened.",2,5,4,2,2,5,4,2,More Accurate,Tie
 64,Can I pay in installments?,other,"Customer: Can I pay in installments?
 
 Agent: I am sorry you are dealing with this. I can help check next steps.
@@ -1751,7 +1751,7 @@ The agent should address the actual question about payment options. A more appro
 
 ""Yes, we do offer installment payment options for qualifying purchases. Let me check what plans are available for your order and walk you through the options.""
 
-Would you like me to help clarify what the customer is actually looking for, or provide guidance on handling payment inquiries?",1,5,1,2,2,5,1,2,More Accurate
+Would you like me to help clarify what the customer is actually looking for, or provide guidance on handling payment inquiries?",1,5,1,2,2,5,1,2,More Accurate,Model B
 65,Why was tax added to my order?,shipping_delivery,"Customer: Why was tax added to my order?
 
 Agent: I am sorry you are dealing with this. I can help check next steps.
@@ -1779,7 +1779,7 @@ Once you share those details, I can either:
 - Your order number
 - The billing address used for the order
 
-Tax is typically added based on the shipping or billing address, as we're required to collect sales tax in certain locations. Once I have your order details, I can review exactly why tax was applied and confirm if it's correct.",2,5,4,2,2,5,4,4,More Concise
+Tax is typically added based on the shipping or billing address, as we're required to collect sales tax in certain locations. Once I have your order details, I can review exactly why tax was applied and confirm if it's correct.",2,5,4,2,2,5,4,4,More Concise,Model B
 66,I need to change the billing address,payments_billing,"Customer: I need to change the billing address
 
 Agent: I am sorry you are dealing with this. I can help check next steps.
@@ -1806,7 +1806,7 @@ Could you please provide:
 - Your account number or the email associated with your account
 - The new billing address you'd like to use
 
-Once I have this information, I can process the address change for you right away. Is there anything specific about the billing address change that wasn't working when you tried to update it yourself?",2,5,4,4,2,5,4,2,More Concise
+Once I have this information, I can process the address change for you right away. Is there anything specific about the billing address change that wasn't working when you tried to update it yourself?",2,5,4,4,2,5,4,2,More Concise,Model A
 67,"My card expired, how do I update it?",payments_billing,"Customer: My card expired, how do I update it?
 
 Agent: I am sorry you are dealing with this. I can help check next steps.
@@ -1831,7 +1831,7 @@ To update your payment method, you can:
 
 2. **Over the phone**: I can help you update it right now if you'd like to provide the new card information.
 
-Which option would work better for you? If you'd prefer to update it online but are running into any issues with those steps, I can walk you through the process or troubleshoot any specific problems you're",2,5,4,4,2,5,4,3,More Concise
+Which option would work better for you? If you'd prefer to update it online but are running into any issues with those steps, I can walk you through the process or troubleshoot any specific problems you're",2,5,4,4,2,5,4,3,More Concise,Model A
 68,Can I remove a saved payment method?,payments_billing,"Customer: Can I remove a saved payment method?
 
 Agent: I am sorry you are dealing with this. I can help check next steps.
@@ -1865,7 +1865,7 @@ This will help me provide more specific guidance","I understand you've already t
 **If you're still having trouble:**
 - Try using a different browser or clearing your browser cache
 - Check if the payment method is tied to any active subscriptions (these may need to be updated first)
-- Try accessing your account from the mobile app instead of web, or vice",2,5,4,4,2,5,4,2,More Concise
+- Try accessing your account from the mobile app instead of web, or vice",2,5,4,4,2,5,4,2,More Concise,Model A
 69,I was overcharged for my purchase,payments_billing,"Customer: I was overcharged for my purchase
 
 Agent: I am sorry you are dealing with this. I can help check next steps.
@@ -1896,7 +1896,7 @@ To best assist you, could you please provide me with:
 - The amount you were charged vs. what you expected to pay
 - When the purchase was made
 
-I'll review your account and work on getting this resolved for you today.",2,5,4,3,2,5,4,4,More Concise
+I'll review your account and work on getting this resolved for you today.",2,5,4,3,2,5,4,4,More Concise,Model B
 70,My bank flagged this transaction as fraud,other,"Customer: My bank flagged this transaction as fraud
 
 Agent: I am sorry you are dealing with this. I can help check next steps.
@@ -1927,7 +1927,7 @@ To assist you best, could you provide a few details:
 2. Have you contacted your bank directly to discuss the fraud flag?
 3. Are you currently unable to complete this transaction, or are there other account restrictions?
 
-Once I have these details, I can guide you through the appropriate next steps to get this resolved quickly.",2,5,4,2,2,5,4,4,More Concise
+Once I have these details, I can guide you through the appropriate next steps to get this resolved quickly.",2,5,4,2,2,5,4,4,More Concise,Model B
 71,I can’t log into my account,account_access,"Customer: I can’t log into my account
 
 Agent: I am sorry you are dealing with this. I can help check next steps.
@@ -1948,7 +1948,7 @@ With these details, I'll be able to identify the issue and get you back into you
 2. Are you using the correct email address associated with your account?
 3. When did you last successfully access your account?
 
-This information will help me identify the exact issue and get you back into your account quickly.",2,5,4,4,2,3,4,4,More Helpful
+This information will help me identify the exact issue and get you back into your account quickly.",2,5,4,4,2,3,4,4,More Helpful,Model A
 72,I forgot my password,account_access,"Customer: I forgot my password
 
 Agent: I am sorry you are dealing with this. I can help check next steps.
@@ -1972,7 +1972,7 @@ I can assist you with resetting your password. To get started, I'll need to veri
 1. The email address associated with your account
 2. Your full name as it appears on the account
 
-Once I have this information, I can walk you through the password reset process or send you a secure reset link directly.",2,5,4,2,2,5,4,3,More Concise
+Once I have this information, I can walk you through the password reset process or send you a secure reset link directly.",2,5,4,2,2,5,4,3,More Concise,Model B
 73,How do I reset my password?,account_access,"Customer: How do I reset my password?
 
 Agent: I am sorry you are dealing with this. I can help check next steps.
@@ -2014,7 +2014,7 @@ Could you please provide:
 - The email address associated with your account
 - Your full name as it appears on the account
 
-Once I have this information, I can guide you through the most appropriate reset process for your",2,5,4,3,2,5,4,2,More Concise
+Once I have this information, I can guide you through the most appropriate reset process for your",2,5,4,3,2,5,4,2,More Concise,Model A
 74,My account is locked,account_access,"Customer: My account is locked
 
 Agent: I am sorry you are dealing with this. I can help check next steps.
@@ -2045,7 +2045,7 @@ To unlock your account, I'll need to verify a few details:
 2. Do you recall what might have triggered the lock? (For example: multiple failed login attempts, suspicious activity notifications, etc.)
 3. Do you have access to the phone number or recovery email on file for this account?
 
-Once I have this information, I can guide you through the account recovery process or escalate this to our security team if needed. We'll get you back into your account as quickly as possible.",2,5,4,2,2,5,4,2,More Accurate
+Once I have this information, I can guide you through the account recovery process or escalate this to our security team if needed. We'll get you back into your account as quickly as possible.",2,5,4,2,2,5,4,2,More Accurate,Tie
 75,I want to delete my account,account_access,"Customer: I want to delete my account
 
 Agent: I am sorry you are dealing with this. I can help check next steps.
@@ -2068,7 +2068,7 @@ Once I have this information, I can walk you through the account deletion proces
 2. Are there any specific issues with your account that led to this decision, or is this simply a preference to no longer use the service?
 3. Just to make sure you're aware - deleting your account will permanently remove all your data, settings, and history. Is this what you'd like to proceed with?
 
-Once I have this information, I can walk you through the account deletion process or explore alternative solutions if appropriate.",2,5,4,3,2,5,4,2,More Concise
+Once I have this information, I can walk you through the account deletion process or explore alternative solutions if appropriate.",2,5,4,3,2,5,4,2,More Concise,Model A
 76,How do I update my email address?,other,"Customer: How do I update my email address?
 
 Agent: I am sorry you are dealing with this. I can help check next steps.
@@ -2089,7 +2089,7 @@ Could you please provide:
 - Your current account username or phone number
 - The last 4 digits of the payment method on file
 
-Once I verify your account, I can walk you through updating your email address or make the change for you directly. What's the new email address you'd like to use?",2,5,4,5,2,5,1,4,Better Tone
+Once I verify your account, I can walk you through updating your email address or make the change for you directly. What's the new email address you'd like to use?",2,5,4,5,2,5,1,4,Better Tone,Model A
 77,I’m not receiving verification emails,account_access,"Customer: I’m not receiving verification emails
 
 Agent: I am sorry you are dealing with this. I can help check next steps.
@@ -2122,7 +2122,7 @@ Once I have these details, I can look into this more thoroughly or escalate to o
 
 **Immediate alternatives:**
 - I can resend the verification email from our system right now
-- We may be able to verify your account through",2,5,4,2,2,5,4,2,More Accurate
+- We may be able to verify your account through",2,5,4,2,2,5,4,2,More Accurate,Tie
 78,My account was hacked,account_access,"Customer: My account was hacked
 
 Agent: I am sorry you are dealing with this. I can help check next steps.
@@ -2156,7 +2156,7 @@ In the meantime, here's what I recommend:
 - What specific signs of hacking have you noticed? (unauthorized purchases, changed settings, etc.)
 - What troubleshooting steps have you already completed?
 
-Would you like",2,5,4,2,2,5,4,2,More Accurate
+Would you like",2,5,4,2,2,5,4,2,More Accurate,Tie
 79,Can I have multiple accounts?,account_access,"Customer: Can I have multiple accounts?
 
 Agent: I am sorry you are dealing with this. I can help check next steps.
@@ -2184,7 +2184,7 @@ Let me provide appropriate responses for both scenarios:
 ""Yes, I can help clarify our policy on multiple accounts. [Company] allows/doesn't allow multiple accounts per customer. Let me explain the details and any requirements or restrictions that may apply.""
 
 **If the customer needs technical support:**
-""I understand you've already tried basic troubleshooting steps. To help resolve this more effectively, could you please describe the specific issue you're experiencing? I'll",2,5,4,2,1,5,4,2,More Accurate
+""I understand you've already tried basic troubleshooting steps. To help resolve this more effectively, could you please describe the specific issue you're experiencing? I'll",2,5,4,2,1,5,4,2,More Accurate,Model A
 80,How do I change my username?,account_access,"Customer: How do I change my username?
 
 Agent: I am sorry you are dealing with this. I can help check next steps.
@@ -2213,7 +2213,7 @@ Could you please provide:
 - Your current username or email associated with the account
 - What you'd like your new username to be
 
-Once I have this information, I can make the change for you right away or let you know if there are any restrictions with your desired username.",2,3,4,3,2,5,4,3,More Helpful
+Once I have this information, I can make the change for you right away or let you know if there are any restrictions with your desired username.",2,3,4,3,2,5,4,3,More Helpful,Model B
 81,I can’t verify my account,account_access,"Customer: I can’t verify my account
 
 Agent: I am sorry you are dealing with this. I can help check next steps.
@@ -2237,7 +2237,7 @@ To better assist you with the account verification issue, could you tell me:
 2. What verification method are you trying to use (email, phone, ID upload, etc.)?
 3. At what point in the verification process does it fail?
 
-This information will help me identify the best solution for your specific situation.",2,5,4,4,2,3,4,4,More Helpful
+This information will help me identify the best solution for your specific situation.",2,5,4,4,2,3,4,4,More Helpful,Model A
 82,My profile information is incorrect,other,"Customer: My profile information is incorrect
 
 Agent: I am sorry you are dealing with this. I can help check next steps.
@@ -2262,7 +2262,7 @@ To better assist you, could you please tell me:
 
 3. Are you unable to edit the fields, or do changes not save after you make them?
 
-I'll be able to provide more targeted assistance once I understand the specific issue you're facing with your profile.",2,5,4,4,1,5,4,2,More Concise
+I'll be able to provide more targeted assistance once I understand the specific issue you're facing with your profile.",2,5,4,4,1,5,4,2,More Concise,Model A
 83,How do I enable two-factor authentication?,other,"Customer: How do I enable two-factor authentication?
 
 Agent: I am sorry you are dealing with this. I can help check next steps.
@@ -2293,7 +2293,7 @@ I appreciate you letting me know you've already tried basic troubleshooting. Let
 3. **Choose your method:**
    - **Text/SMS**: Enter your phone number to receive codes via text
    - **Authenticator app**: Use apps like Google Authenticator, Authy, or Microsoft Authenticator
-   - **Email**: Receive",2,3,1,4,2,3,4,4,Better Tone
+   - **Email**: Receive",2,3,1,4,2,3,4,4,Better Tone,Model B
 84,I want to unsubscribe from emails,other,"Customer: I want to unsubscribe from emails
 
 Agent: I am sorry you are dealing with this. I can help check next steps.
@@ -2321,7 +2321,7 @@ To better assist you, could you please let me know:
 1. Are you trying to unsubscribe from marketing emails, order notifications, or all emails from us?
 2. What troubleshooting steps have you already attempted?
 
-In the meantime, I can immediately process an unsubscribe request for you from our system. Would you like me to remove your email address from our marketing communications list right now?",2,5,4,3,2,5,4,4,More Concise
+In the meantime, I can immediately process an unsubscribe request for you from our system. Would you like me to remove your email address from our marketing communications list right now?",2,5,4,3,2,5,4,4,More Concise,Model B
 85,Why was my account suspended?,account_access,"Customer: Why was my account suspended?
 
 Agent: I am sorry you are dealing with this. I can help check next steps.
@@ -2348,7 +2348,7 @@ What information can you share?","I understand your frustration. Let me look int
 2. Did you receive any email notifications about the suspension that might include a reason code or reference number?
 3. When did you first notice the account was suspended?
 
-Once I have this information, I can review your account status and explain the specific reason for the suspension, as well as outline the steps needed to resolve this issue.",2,5,4,2,2,5,4,2,More Accurate
+Once I have this information, I can review your account status and explain the specific reason for the suspension, as well as outline the steps needed to resolve this issue.",2,5,4,2,2,5,4,2,More Accurate,Tie
 86,The product broke after one use,product_quality,"Customer: The product broke after one use
 
 Agent: I am sorry you are dealing with this. I can help check next steps.
@@ -2381,7 +2381,7 @@ To determine the best solution for you, could you please provide:
 - When did you purchase it?
 - Do you have your order number or receipt handy?
 
-Based on what you've described, you'll likely be eligible for either a replacement or full refund. I want to make sure we get you taken care of right away.",2,5,1,3,2,5,4,4,Better Tone
+Based on what you've described, you'll likely be eligible for either a replacement or full refund. I want to make sure we get you taken care of right away.",2,5,1,3,2,5,4,4,Better Tone,Model B
 87,The item I received looks different from the website,other,"Customer: The item I received looks different from the website
 
 Agent: I am sorry you are dealing with this. I can help check next steps.
@@ -2409,7 +2409,7 @@ To best assist you, could you please tell me:
 - What specific differences did you notice between the item and the website description/photos?
 - What is the order number for this purchase?
 
-Based on what you describe, I'll be able to offer you the most appropriate solution, which may include a replacement, exchange, or refund. We want to make sure you receive exactly what you ordered.",2,5,4,4,2,5,4,4,More Accurate
+Based on what you describe, I'll be able to offer you the most appropriate solution, which may include a replacement, exchange, or refund. We want to make sure you receive exactly what you ordered.",2,5,4,4,2,5,4,4,More Accurate,Tie
 88,Do you restock sold-out items?,other,"Customer: Do you restock sold-out items?
 
 Agent: I am sorry you are dealing with this. I can help check next steps.
@@ -2439,7 +2439,7 @@ For the customer's restocking question, a more appropriate response would be:
 
 ""Yes, we do restock sold-out items regularly. Let me check the specific item you're interested in to see when we expect it back in stock. Could you please provide the product name or item number? I can also set up a notification for you when it becomes available again.""
 
-Would you like me to help address their original question about restocking?",2,5,4,2,1,5,1,2,Better Tone
+Would you like me to help address their original question about restocking?",2,5,4,2,1,5,1,2,Better Tone,Model A
 89,How do I use this product?,other,"Customer: How do I use this product?
 
 Agent: I am sorry you are dealing with this. I can help check next steps.
@@ -2470,7 +2470,7 @@ The agent's response about ""sorry you are dealing with this"" and ""check next 
 A better agent response might be:
 ""I'd be happy to help you learn how to use the product! Could you tell me which specific product you're asking about, and what you'd like to accomplish with it? That way I can provide you with the most relevant instructions.""
 
-The customer's follow-up about trying",1,5,1,3,1,5,3,2,Better Tone
+The customer's follow-up about trying",1,5,1,3,1,5,3,2,Better Tone,Model B
 90,The size doesn’t fit me,other,"Customer: The size doesn’t fit me
 
 Agent: I am sorry you are dealing with this. I can help check next steps.
@@ -2498,7 +2498,7 @@ To get this resolved quickly, could you please provide:
 - Which item(s) don't fit
 - What size you'd prefer instead (if you'd like an exchange)
 
-We can process a return for a full refund or exchange it for the right size. Most exchanges can be processed within 1-2 business days once we receive the item back. Would you prefer to exchange for a different size or return for a refund?",2,5,4,4,2,5,4,2,More Concise
+We can process a return for a full refund or exchange it for the right size. Most exchanges can be processed within 1-2 business days once we receive the item back. Would you prefer to exchange for a different size or return for a refund?",2,5,4,4,2,5,4,2,More Concise,Model A
 91,Is this product authentic?,other,"Customer: Is this product authentic?
 
 Agent: I am sorry you are dealing with this. I can help check next steps.
@@ -2525,7 +2525,7 @@ To provide better assistance, could you clarify:
 - Are you asking about whether a product is genuine/authentic?
 - Or are you experiencing a technical issue that needs troubleshooting?
 
-This will help ensure you get the most relevant support for your specific concern.",1,5,1,2,1,3,1,4,More Helpful
+This will help ensure you get the most relevant support for your specific concern.",1,5,1,2,1,3,1,4,More Helpful,Tie
 92,The quality is not as expected,product_quality,"Customer: The quality is not as expected
 
 Agent: I am sorry you are dealing with this. I can help check next steps.
@@ -2553,7 +2553,7 @@ I appreciate your patience, and we'll work to resolve this quickly.","I understa
 2. What troubleshooting steps have you already tried?
 3. When did you first notice these issues?
 
-This information will help me determine the most appropriate next steps to resolve this for you quickly.",2,5,4,4,1,5,4,4,More Accurate
+This information will help me determine the most appropriate next steps to resolve this for you quickly.",2,5,4,4,1,5,4,4,More Accurate,Model A
 93,Can I get a replacement?,product_quality,"Customer: Can I get a replacement?
 
 Agent: I am sorry you are dealing with this. I can help check next steps.
@@ -2579,7 +2579,7 @@ What product are we replacing today?","I understand you've already gone through 
 2. What problem are you experiencing?
 3. What troubleshooting steps have you already tried?
 
-Once I have these details, I can review your options and guide you through the replacement process if that's the appropriate next step.",2,5,4,4,1,5,4,4,More Accurate
+Once I have these details, I can review your options and guide you through the replacement process if that's the appropriate next step.",2,5,4,4,1,5,4,4,More Accurate,Model A
 94,The product is missing parts,other,"Customer: The product is missing parts
 
 Agent: I am sorry you are dealing with this. I can help check next steps.
@@ -2615,7 +2615,7 @@ Based on this information, I can either:
 - Arrange for a replacement product
 - Process a return/refund if you prefer
 
-What would work",2,5,4,2,2,5,4,2,More Accurate
+What would work",2,5,4,2,2,5,4,2,More Accurate,Tie
 95,Is there a warranty on this item?,product_quality,"Customer: Is there a warranty on this item?
 
 Agent: I am sorry you are dealing with this. I can help check next steps.
@@ -2643,7 +2643,7 @@ To better assist, I'd recommend the agent clarify by asking something like:
 
 ""I want to make sure I understand correctly - are you looking for warranty information about a product, or are you experiencing an issue with an item you've purchased? If you're having a problem, could you tell me what specific issue you're encountering so I can help you with the appropriate next steps?""
 
-This would help align the conversation and ensure the customer gets the right type of assistance",2,5,4,4,1,5,4,2,More Concise
+This would help align the conversation and ensure the customer gets the right type of assistance",2,5,4,4,1,5,4,2,More Concise,Model A
 96,Can you recommend a similar product?,other,"Customer: Can you recommend a similar product?
 
 Agent: I am sorry you are dealing with this. I can help check next steps.
@@ -2673,7 +2673,7 @@ It seems like there may be missing context about what specific product or issue 
 2. Ask for clarification about the original product/issue
 3. Then either provide troubleshooting for the current product OR recommend a similar alternative product
 
-Would you like me to suggest how the agent should respond next, or is there additional context about this customer interaction that would help?",1,5,4,4,1,3,1,2,Better Tone
+Would you like me to suggest how the agent should respond next, or is there additional context about this customer interaction that would help?",1,5,4,4,1,3,1,2,Better Tone,Model A
 97,"This item is out of stock, when will it return?",returns_refunds,"Customer: This item is out of stock, when will it return?
 
 Agent: I am sorry you are dealing with this. I can help check next steps.
@@ -2700,7 +2700,7 @@ A more appropriate response to their stock availability question would be someth
 
 ""I apologize that the item you're looking for is currently out of stock. Let me check our inventory system to see if we have an estimated restock date for you, or I can help you find similar alternatives that are currently available.""
 
-Would you like me to help you address their original question about stock availability?",1,5,4,3,1,5,4,4,More Concise
+Would you like me to help you address their original question about stock availability?",1,5,4,3,1,5,4,4,More Concise,Model B
 98,The product arrived expired,shipping_delivery,"Customer: The product arrived expired
 
 Agent: I am sorry you are dealing with this. I can help check next steps.
@@ -2723,7 +2723,7 @@ Once I have this information, I'll prioritize getting this resolved for you righ
 2. **Return options**: I can arrange for a prepaid return label so you can send back the expired product
 3. **Expedited shipping**: Given the inconvenience, I can offer expedited shipping on your replacement at no extra cost
 
-Could you please provide me with your order number so I can get this resolved for you quickly? Also, would you prefer the replacement to be sent before you return the expired",2,5,4,4,2,5,4,2,More Concise
+Could you please provide me with your order number so I can get this resolved for you quickly? Also, would you prefer the replacement to be sent before you return the expired",2,5,4,4,2,5,4,2,More Concise,Model A
 99,I received a defective item,product_quality,"Customer: I received a defective item
 
 Agent: I am sorry you are dealing with this. I can help check next steps.
@@ -2751,7 +2751,7 @@ What details can you share with me?","I understand how frustrating that must be 
 - What's the order number or product details?
 - What troubleshooting steps did you already try?
 
-Based on what you share, I can look into options like a replacement, repair, or refund to get this resolved for you quickly.",2,5,4,4,2,5,4,4,More Accurate
+Based on what you share, I can look into options like a replacement, repair, or refund to get this resolved for you quickly.",2,5,4,4,2,5,4,4,More Accurate,Tie
 100,Can I get help setting up this product?,other,"Customer: Can I get help setting up this product?
 
 Agent: I am sorry you are dealing with this. I can help check next steps.
@@ -2780,4 +2780,4 @@ To make sure I point you in the right direction, could you tell me:
 - What step in the setup process are you stuck on?
 - What happens when you try to complete that step?
 
-This will help me determine the best next steps to get your product working properly.",1,5,1,4,1,3,4,4,Better Tone
+This will help me determine the best next steps to get your product working properly.",1,5,1,4,1,3,4,4,Better Tone,Model B

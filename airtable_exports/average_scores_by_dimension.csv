@@ -1,0 +1,5 @@
+dimension,model_a_avg,model_b_avg,winner
+Correctness,1.94,1.86,Model A
+Helpfulness,4.92,4.82,Model A
+Tone,3.64,3.36,Model A
+Conciseness,3.26,3.06,Model A

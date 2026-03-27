@@ -1,5 +1,7 @@
 """
-Fill conciseness_a / conciseness_b and win_reason in eval_scored.csv.
+Fill conciseness_a / conciseness_b, win_reason, and model_winner in eval_scored.csv.
+
+model_winner uses mean of correctness, helpfulness, tone, and conciseness (÷ 4) per model.
 
 Conciseness heuristic (1–5)
 -------------------------
@@ -25,6 +27,8 @@ We combine two signals, then average (rounded to an integer 1–5):
 
 Final conciseness = round((word_score + ratio_score) / 2), clipped to 1–5.
 """
+import math
+
 import pandas as pd
 
 INPUT = "eval_scored.csv"
@@ -88,6 +92,34 @@ def win_reason(row) -> str:
     return max(scores, key=lambda k: abs(scores[k]))
 
 
+def model_winner(row):
+    """
+    Composite score = (correctness + helpfulness + tone + conciseness) / 4 per model.
+    """
+    if (
+        pd.isna(row["conciseness_a"])
+        or pd.isna(row["conciseness_b"])
+    ):
+        return pd.NA
+    score_a = (
+        row["correctness_a"]
+        + row["helpfulness_a"]
+        + row["tone_a"]
+        + row["conciseness_a"]
+    ) / 4
+    score_b = (
+        row["correctness_b"]
+        + row["helpfulness_b"]
+        + row["tone_b"]
+        + row["conciseness_b"]
+    ) / 4
+    if score_a > score_b:
+        return "Model A"
+    if math.isclose(score_a, score_b, rel_tol=0.0, abs_tol=1e-9):
+        return "Tie"
+    return "Model B"
+
+
 def main():
     df = pd.read_csv(INPUT)
     df["conciseness_a"] = [
@@ -97,10 +129,12 @@ def main():
         conciseness_score(r, p) for r, p in zip(df["response_model_b"], df["prompt"])
     ]
     df["win_reason"] = df.apply(win_reason, axis=1)
+    df["model_winner"] = df.apply(model_winner, axis=1)
     df.to_csv(OUTPUT, index=False)
     print(f"Updated {len(df)} rows in {OUTPUT}")
     print("conciseness_a:", df["conciseness_a"].value_counts().sort_index().to_dict())
     print("conciseness_b:", df["conciseness_b"].value_counts().sort_index().to_dict())
+    print("model_winner:", df["model_winner"].value_counts().to_dict())
 
 
 if __name__ == "__main__":

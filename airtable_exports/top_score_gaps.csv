@@ -1,0 +1,26 @@
+rank,ID,prompt,model_winner,win_reason,score_gap
+1,37,Can I return an item after 30 days?,Model A,Better Tone,7
+2,96,Can you recommend a similar product?,Model A,Better Tone,7
+3,61,Can I get a receipt emailed to me?,Model A,Better Tone,6
+4,10,Can I pick up my order instead of delivery?,Model A,Better Tone,5
+5,19,I need my order before a specific date,Model A,Better Tone,5
+6,33,How long do refunds take?,Model A,Better Tone,5
+7,55,Can I update my payment method?,Model A,Better Tone,5
+8,28,What is your return policy?,Model A,Better Tone,4
+9,76,How do I update my email address?,Model A,Better Tone,4
+10,86,The product broke after one use,Model B,Better Tone,4
+11,88,Do you restock sold-out items?,Model A,Better Tone,4
+12,5,Can I change my shipping address after placing an order?,Model A,Better Tone,3
+13,7,Why is my order taking so long to ship?,Model B,Better Tone,3
+14,17,Can you expedite my shipment?,Model A,Better Tone,3
+15,40,Can I cancel my return request?,Model A,Better Tone,3
+16,51,I was charged twice for my order,Model B,Better Tone,3
+17,53,Can I use multiple payment methods?,Model A,Better Tone,3
+18,57,Do you accept PayPal?,Model A,Better Tone,3
+19,82,My profile information is incorrect,Model A,More Concise,3
+20,83,How do I enable two-factor authentication?,Model B,Better Tone,3
+21,95,Is there a warranty on this item?,Model A,More Concise,3
+22,9,My order is stuck in transit,Model B,More Concise,2
+23,13,The courier says delivered but I don’t see it,Model A,More Concise,2
+24,20,Why haven’t I received a shipping confirmation?,Model B,More Concise,2
+25,21,My order is marked as returned to sender,Model A,More Concise,2
