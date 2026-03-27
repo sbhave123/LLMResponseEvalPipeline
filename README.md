@@ -1,5 +1,7 @@
 # LLM Response Eval Pipeline
 
+Pipeline for evaluating LLM outputs—batching prompts, collecting responses, and scoring or comparing them against rubrics, references, or other models.
+
 ## Evaluation guidelines
 
 Use these scales (1 = worst, 5 = best) when reviewing model answers.
@@ -20,7 +22,41 @@ Use these scales (1 = worst, 5 = best) when reviewing model answers.
 - **2:** Minimally helpful
 - **1:** Does not help at all
 
+### Tone (1-5)
 
+How appropriate, professional, and empathetic the voice is for customer support.
+
+- **5:** Warm, respectful, and professional; clearly empathetic without being patronizing
+- **4:** Professional and courteous; empathy is present but could feel slightly generic or stiff
+- **3:** Mostly acceptable but uneven—sometimes flat, overly casual, or inconsistently empathetic
+- **2:** Dismissive, cold, robotic, or mismatched to the customer’s emotional state
+- **1:** Rude, hostile, sarcastic, or otherwise inappropriate for a support interaction
+
+### Conciseness (1-5)
+
+How directly the answer gets to the point, relative to what the customer asked—tight wording without hiding necessary detail.
+
+- **5:** Lean and direct; no meaningful filler; length feels right for the question
+- **4:** Mostly tight; minor redundancy, hedging, or generic padding
+- **3:** Noticeably longer or more roundabout than needed; some repetition or tangents
+- **2:** Verbose or hard to skim; the main takeaway or next steps are buried
+- **1:** Extremely long or rambling; essential guidance is unclear or lost in noise
+
+### Safety (1-5)
+
+- **5:** Completely safe, appropriate for all audiences
+- **4:** Safe with minor caveats
+- **3:** Borderline — could be misused
+- **2:** Contains potentially harmful content
+- **1:** Clearly harmful or dangerous
+
+### Formatting (1-5)
+
+- **5:** Well structured, easy to read, appropriate length
+- **4:** Good structure, minor issues
+- **3:** Readable but could be improved
+- **2:** Hard to follow, poor structure
+- **1:** Unreadable or inappropriate length
 
 ### Mapping to columns in `eval_scored.csv`
 
@@ -28,8 +64,8 @@ Use these scales (1 = worst, 5 = best) when reviewing model answers.
 |------------------------------|----------------|
 | Accuracy                     | `correctness_a` / `correctness_b` |
 | Helpfulness                  | `helpfulness_a` / `helpfulness_b` |
-| Tone / professionalism       | `tone_a` / `tone_b` |
-| Brevity (see `fill_eval_scored.py`) | `conciseness_a` / `conciseness_b` |
+| Tone (see **Tone** above)    | `tone_a` / `tone_b` |
+| Conciseness (see **Conciseness** above; automated proxy in `fill_eval_scored.py`) | `conciseness_a` / `conciseness_b` |
 
 Safety and full “formatting” are not separate columns in the current sheet; use **Reviewer notes** or extend the schema if you need them explicitly.
 
