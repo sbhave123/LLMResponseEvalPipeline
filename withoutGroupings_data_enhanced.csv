@@ -1,0 +1,501 @@
+prompt,category,difficulty,prompt_contextual
+"My order hasn’t arrived yet, what do I do?",shipping_delivery,medium,"Customer: My order hasn’t arrived yet, what do I do?
+
+Agent: I am sorry you are dealing with this. I can help check next steps.
+
+Customer: I already tried basic troubleshooting and still need help."
+"My package is delayed, can you check the status?",shipping_delivery,medium,"Customer: My package is delayed, can you check the status?
+
+Agent: I am sorry you are dealing with this. I can help check next steps.
+
+Customer: I already tried basic troubleshooting and still need help."
+It says delivered but I never received my order,shipping_delivery,easy,"Customer: It says delivered but I never received my order
+
+Agent: I am sorry you are dealing with this. I can help check next steps.
+
+Customer: I already tried basic troubleshooting and still need help."
+How long does shipping usually take?,shipping_delivery,easy,"Customer: How long does shipping usually take?
+
+Agent: I am sorry you are dealing with this. I can help check next steps.
+
+Customer: I already tried basic troubleshooting and still need help."
+Can I change my shipping address after placing an order?,shipping_delivery,easy,"Customer: Can I change my shipping address after placing an order?
+
+Agent: I am sorry you are dealing with this. I can help check next steps.
+
+Customer: I already tried basic troubleshooting and still need help."
+My tracking number isn’t working,shipping_delivery,easy,"Customer: My tracking number isn’t working
+
+Agent: I am sorry you are dealing with this. I can help check next steps.
+
+Customer: I already tried basic troubleshooting and still need help."
+Why is my order taking so long to ship?,shipping_delivery,medium,"Customer: Why is my order taking so long to ship?
+
+Agent: I am sorry you are dealing with this. I can help check next steps.
+
+Customer: I already tried basic troubleshooting and still need help."
+I paid for express shipping but it’s late,shipping_delivery,easy,"Customer: I paid for express shipping but it’s late
+
+Agent: I am sorry you are dealing with this. I can help check next steps.
+
+Customer: I already tried basic troubleshooting and still need help."
+My order is stuck in transit,shipping_delivery,easy,"Customer: My order is stuck in transit
+
+Agent: I am sorry you are dealing with this. I can help check next steps.
+
+Customer: I already tried basic troubleshooting and still need help."
+Can I pick up my order instead of delivery?,shipping_delivery,easy,"Customer: Can I pick up my order instead of delivery?
+
+Agent: I am sorry you are dealing with this. I can help check next steps.
+
+Customer: I already tried basic troubleshooting and still need help."
+I received only part of my order,shipping_delivery,easy,"Customer: I received only part of my order
+
+Agent: I am sorry you are dealing with this. I can help check next steps.
+
+Customer: I already tried basic troubleshooting and still need help."
+My package was damaged during delivery,shipping_delivery,easy,"Customer: My package was damaged during delivery
+
+Agent: I am sorry you are dealing with this. I can help check next steps.
+
+Customer: I already tried basic troubleshooting and still need help."
+The courier says delivered but I don’t see it,shipping_delivery,easy,"Customer: The courier says delivered but I don’t see it
+
+Agent: I am sorry you are dealing with this. I can help check next steps.
+
+Customer: I already tried basic troubleshooting and still need help."
+Can you resend my package?,shipping_delivery,easy,"Customer: Can you resend my package?
+
+Agent: I am sorry you are dealing with this. I can help check next steps.
+
+Customer: I already tried basic troubleshooting and still need help."
+My order was canceled without notice,shipping_delivery,easy,"Customer: My order was canceled without notice
+
+Agent: I am sorry you are dealing with this. I can help check next steps.
+
+Customer: I already tried basic troubleshooting and still need help."
+I accidentally entered the wrong address,other,easy,"Customer: I accidentally entered the wrong address
+
+Agent: I am sorry you are dealing with this. I can help check next steps.
+
+Customer: I already tried basic troubleshooting and still need help."
+Can you expedite my shipment?,shipping_delivery,easy,"Customer: Can you expedite my shipment?
+
+Agent: I am sorry you are dealing with this. I can help check next steps.
+
+Customer: I already tried basic troubleshooting and still need help."
+My delivery date keeps changing,shipping_delivery,easy,"Customer: My delivery date keeps changing
+
+Agent: I am sorry you are dealing with this. I can help check next steps.
+
+Customer: I already tried basic troubleshooting and still need help."
+I need my order before a specific date,shipping_delivery,easy,"Customer: I need my order before a specific date
+
+Agent: I am sorry you are dealing with this. I can help check next steps.
+
+Customer: I already tried basic troubleshooting and still need help."
+Why haven’t I received a shipping confirmation?,shipping_delivery,medium,"Customer: Why haven’t I received a shipping confirmation?
+
+Agent: I am sorry you are dealing with this. I can help check next steps.
+
+Customer: I already tried basic troubleshooting and still need help."
+My order is marked as returned to sender,shipping_delivery,easy,"Customer: My order is marked as returned to sender
+
+Agent: I am sorry you are dealing with this. I can help check next steps.
+
+Customer: I already tried basic troubleshooting and still need help."
+Can I track my order in real-time?,shipping_delivery,easy,"Customer: Can I track my order in real-time?
+
+Agent: I am sorry you are dealing with this. I can help check next steps.
+
+Customer: I already tried basic troubleshooting and still need help."
+I never got a confirmation email,other,easy,"Customer: I never got a confirmation email
+
+Agent: I am sorry you are dealing with this. I can help check next steps.
+
+Customer: I already tried basic troubleshooting and still need help."
+"My package is lost, what now?",shipping_delivery,medium,"Customer: My package is lost, what now?
+
+Agent: I am sorry you are dealing with this. I can help check next steps.
+
+Customer: I already tried basic troubleshooting and still need help."
+Can you ship internationally?,shipping_delivery,easy,"Customer: Can you ship internationally?
+
+Agent: I am sorry you are dealing with this. I can help check next steps.
+
+Customer: I already tried basic troubleshooting and still need help."
+I want a refund for a defective product,returns_refunds,easy,"Customer: I want a refund for a defective product
+
+Agent: I am sorry you are dealing with this. I can help check next steps.
+
+Customer: I already tried basic troubleshooting and still need help."
+How do I return an item?,returns_refunds,easy,"Customer: How do I return an item?
+
+Agent: I am sorry you are dealing with this. I can help check next steps.
+
+Customer: I already tried basic troubleshooting and still need help."
+What is your return policy?,returns_refunds,easy,"Customer: What is your return policy?
+
+Agent: I am sorry you are dealing with this. I can help check next steps.
+
+Customer: I already tried basic troubleshooting and still need help."
+My refund hasn’t been processed yet,returns_refunds,easy,"Customer: My refund hasn’t been processed yet
+
+Agent: I am sorry you are dealing with this. I can help check next steps.
+
+Customer: I already tried basic troubleshooting and still need help."
+I returned my item but haven’t gotten my money,returns_refunds,easy,"Customer: I returned my item but haven’t gotten my money
+
+Agent: I am sorry you are dealing with this. I can help check next steps.
+
+Customer: I already tried basic troubleshooting and still need help."
+Can I exchange instead of refund?,returns_refunds,easy,"Customer: Can I exchange instead of refund?
+
+Agent: I am sorry you are dealing with this. I can help check next steps.
+
+Customer: I already tried basic troubleshooting and still need help."
+The return label isn’t working,returns_refunds,easy,"Customer: The return label isn’t working
+
+Agent: I am sorry you are dealing with this. I can help check next steps.
+
+Customer: I already tried basic troubleshooting and still need help."
+How long do refunds take?,returns_refunds,easy,"Customer: How long do refunds take?
+
+Agent: I am sorry you are dealing with this. I can help check next steps.
+
+Customer: I already tried basic troubleshooting and still need help."
+"I received the wrong item, can I return it?",returns_refunds,easy,"Customer: I received the wrong item, can I return it?
+
+Agent: I am sorry you are dealing with this. I can help check next steps.
+
+Customer: I already tried basic troubleshooting and still need help."
+Do I have to pay for return shipping?,shipping_delivery,easy,"Customer: Do I have to pay for return shipping?
+
+Agent: I am sorry you are dealing with this. I can help check next steps.
+
+Customer: I already tried basic troubleshooting and still need help."
+"My return was rejected, why?",returns_refunds,medium,"Customer: My return was rejected, why?
+
+Agent: I am sorry you are dealing with this. I can help check next steps.
+
+Customer: I already tried basic troubleshooting and still need help."
+Can I return an item after 30 days?,returns_refunds,easy,"Customer: Can I return an item after 30 days?
+
+Agent: I am sorry you are dealing with this. I can help check next steps.
+
+Customer: I already tried basic troubleshooting and still need help."
+"I lost my receipt, can I still return?",returns_refunds,medium,"Customer: I lost my receipt, can I still return?
+
+Agent: I am sorry you are dealing with this. I can help check next steps.
+
+Customer: I already tried basic troubleshooting and still need help."
+I was refunded the wrong amount,returns_refunds,easy,"Customer: I was refunded the wrong amount
+
+Agent: I am sorry you are dealing with this. I can help check next steps.
+
+Customer: I already tried basic troubleshooting and still need help."
+Can I cancel my return request?,returns_refunds,easy,"Customer: Can I cancel my return request?
+
+Agent: I am sorry you are dealing with this. I can help check next steps.
+
+Customer: I already tried basic troubleshooting and still need help."
+"I returned multiple items, where is my refund?",returns_refunds,easy,"Customer: I returned multiple items, where is my refund?
+
+Agent: I am sorry you are dealing with this. I can help check next steps.
+
+Customer: I already tried basic troubleshooting and still need help."
+Can I return a used product?,returns_refunds,easy,"Customer: Can I return a used product?
+
+Agent: I am sorry you are dealing with this. I can help check next steps.
+
+Customer: I already tried basic troubleshooting and still need help."
+"The item arrived damaged, can I get a refund?",shipping_delivery,easy,"Customer: The item arrived damaged, can I get a refund?
+
+Agent: I am sorry you are dealing with this. I can help check next steps.
+
+Customer: I already tried basic troubleshooting and still need help."
+"I was charged a restocking fee, why?",returns_refunds,medium,"Customer: I was charged a restocking fee, why?
+
+Agent: I am sorry you are dealing with this. I can help check next steps.
+
+Customer: I already tried basic troubleshooting and still need help."
+Can I get store credit instead?,other,easy,"Customer: Can I get store credit instead?
+
+Agent: I am sorry you are dealing with this. I can help check next steps.
+
+Customer: I already tried basic troubleshooting and still need help."
+My refund is taking too long,returns_refunds,easy,"Customer: My refund is taking too long
+
+Agent: I am sorry you are dealing with this. I can help check next steps.
+
+Customer: I already tried basic troubleshooting and still need help."
+I want to return a gift,returns_refunds,easy,"Customer: I want to return a gift
+
+Agent: I am sorry you are dealing with this. I can help check next steps.
+
+Customer: I already tried basic troubleshooting and still need help."
+Can I return without original packaging?,returns_refunds,easy,"Customer: Can I return without original packaging?
+
+Agent: I am sorry you are dealing with this. I can help check next steps.
+
+Customer: I already tried basic troubleshooting and still need help."
+I accidentally returned the wrong item,returns_refunds,easy,"Customer: I accidentally returned the wrong item
+
+Agent: I am sorry you are dealing with this. I can help check next steps.
+
+Customer: I already tried basic troubleshooting and still need help."
+"My refund was denied, what can I do?",returns_refunds,hard,"Customer: My refund was denied, what can I do?
+
+Agent: I am sorry you are dealing with this. I can help check next steps.
+
+Customer: I already tried basic troubleshooting and still need help."
+I was charged twice for my order,shipping_delivery,hard,"Customer: I was charged twice for my order
+
+Agent: I am sorry you are dealing with this. I can help check next steps.
+
+Customer: I already tried basic troubleshooting and still need help."
+Why was my card declined?,payments_billing,medium,"Customer: Why was my card declined?
+
+Agent: I am sorry you are dealing with this. I can help check next steps.
+
+Customer: I already tried basic troubleshooting and still need help."
+Can I use multiple payment methods?,payments_billing,easy,"Customer: Can I use multiple payment methods?
+
+Agent: I am sorry you are dealing with this. I can help check next steps.
+
+Customer: I already tried basic troubleshooting and still need help."
+I see an unknown charge from your company,other,easy,"Customer: I see an unknown charge from your company
+
+Agent: I am sorry you are dealing with this. I can help check next steps.
+
+Customer: I already tried basic troubleshooting and still need help."
+Can I update my payment method?,payments_billing,easy,"Customer: Can I update my payment method?
+
+Agent: I am sorry you are dealing with this. I can help check next steps.
+
+Customer: I already tried basic troubleshooting and still need help."
+My payment didn’t go through but I was charged,payments_billing,easy,"Customer: My payment didn’t go through but I was charged
+
+Agent: I am sorry you are dealing with this. I can help check next steps.
+
+Customer: I already tried basic troubleshooting and still need help."
+Do you accept PayPal?,payments_billing,easy,"Customer: Do you accept PayPal?
+
+Agent: I am sorry you are dealing with this. I can help check next steps.
+
+Customer: I already tried basic troubleshooting and still need help."
+Can I get an invoice for my purchase?,payments_billing,easy,"Customer: Can I get an invoice for my purchase?
+
+Agent: I am sorry you are dealing with this. I can help check next steps.
+
+Customer: I already tried basic troubleshooting and still need help."
+Why am I being charged a subscription fee?,payments_billing,medium,"Customer: Why am I being charged a subscription fee?
+
+Agent: I am sorry you are dealing with this. I can help check next steps.
+
+Customer: I already tried basic troubleshooting and still need help."
+I canceled but I’m still being billed,other,easy,"Customer: I canceled but I’m still being billed
+
+Agent: I am sorry you are dealing with this. I can help check next steps.
+
+Customer: I already tried basic troubleshooting and still need help."
+Can I get a receipt emailed to me?,returns_refunds,easy,"Customer: Can I get a receipt emailed to me?
+
+Agent: I am sorry you are dealing with this. I can help check next steps.
+
+Customer: I already tried basic troubleshooting and still need help."
+My promo code didn’t work,payments_billing,easy,"Customer: My promo code didn’t work
+
+Agent: I am sorry you are dealing with this. I can help check next steps.
+
+Customer: I already tried basic troubleshooting and still need help."
+I was charged after canceling my order,shipping_delivery,easy,"Customer: I was charged after canceling my order
+
+Agent: I am sorry you are dealing with this. I can help check next steps.
+
+Customer: I already tried basic troubleshooting and still need help."
+Can I pay in installments?,other,easy,"Customer: Can I pay in installments?
+
+Agent: I am sorry you are dealing with this. I can help check next steps.
+
+Customer: I already tried basic troubleshooting and still need help."
+Why was tax added to my order?,shipping_delivery,medium,"Customer: Why was tax added to my order?
+
+Agent: I am sorry you are dealing with this. I can help check next steps.
+
+Customer: I already tried basic troubleshooting and still need help."
+I need to change the billing address,payments_billing,easy,"Customer: I need to change the billing address
+
+Agent: I am sorry you are dealing with this. I can help check next steps.
+
+Customer: I already tried basic troubleshooting and still need help."
+"My card expired, how do I update it?",payments_billing,easy,"Customer: My card expired, how do I update it?
+
+Agent: I am sorry you are dealing with this. I can help check next steps.
+
+Customer: I already tried basic troubleshooting and still need help."
+Can I remove a saved payment method?,payments_billing,easy,"Customer: Can I remove a saved payment method?
+
+Agent: I am sorry you are dealing with this. I can help check next steps.
+
+Customer: I already tried basic troubleshooting and still need help."
+I was overcharged for my purchase,payments_billing,easy,"Customer: I was overcharged for my purchase
+
+Agent: I am sorry you are dealing with this. I can help check next steps.
+
+Customer: I already tried basic troubleshooting and still need help."
+My bank flagged this transaction as fraud,other,hard,"Customer: My bank flagged this transaction as fraud
+
+Agent: I am sorry you are dealing with this. I can help check next steps.
+
+Customer: I already tried basic troubleshooting and still need help."
+I can’t log into my account,account_access,easy,"Customer: I can’t log into my account
+
+Agent: I am sorry you are dealing with this. I can help check next steps.
+
+Customer: I already tried basic troubleshooting and still need help."
+I forgot my password,account_access,easy,"Customer: I forgot my password
+
+Agent: I am sorry you are dealing with this. I can help check next steps.
+
+Customer: I already tried basic troubleshooting and still need help."
+How do I reset my password?,account_access,easy,"Customer: How do I reset my password?
+
+Agent: I am sorry you are dealing with this. I can help check next steps.
+
+Customer: I already tried basic troubleshooting and still need help."
+My account is locked,account_access,easy,"Customer: My account is locked
+
+Agent: I am sorry you are dealing with this. I can help check next steps.
+
+Customer: I already tried basic troubleshooting and still need help."
+I want to delete my account,account_access,easy,"Customer: I want to delete my account
+
+Agent: I am sorry you are dealing with this. I can help check next steps.
+
+Customer: I already tried basic troubleshooting and still need help."
+How do I update my email address?,other,easy,"Customer: How do I update my email address?
+
+Agent: I am sorry you are dealing with this. I can help check next steps.
+
+Customer: I already tried basic troubleshooting and still need help."
+I’m not receiving verification emails,account_access,easy,"Customer: I’m not receiving verification emails
+
+Agent: I am sorry you are dealing with this. I can help check next steps.
+
+Customer: I already tried basic troubleshooting and still need help."
+My account was hacked,account_access,hard,"Customer: My account was hacked
+
+Agent: I am sorry you are dealing with this. I can help check next steps.
+
+Customer: I already tried basic troubleshooting and still need help."
+Can I have multiple accounts?,account_access,easy,"Customer: Can I have multiple accounts?
+
+Agent: I am sorry you are dealing with this. I can help check next steps.
+
+Customer: I already tried basic troubleshooting and still need help."
+How do I change my username?,account_access,easy,"Customer: How do I change my username?
+
+Agent: I am sorry you are dealing with this. I can help check next steps.
+
+Customer: I already tried basic troubleshooting and still need help."
+I can’t verify my account,account_access,easy,"Customer: I can’t verify my account
+
+Agent: I am sorry you are dealing with this. I can help check next steps.
+
+Customer: I already tried basic troubleshooting and still need help."
+My profile information is incorrect,other,easy,"Customer: My profile information is incorrect
+
+Agent: I am sorry you are dealing with this. I can help check next steps.
+
+Customer: I already tried basic troubleshooting and still need help."
+How do I enable two-factor authentication?,other,easy,"Customer: How do I enable two-factor authentication?
+
+Agent: I am sorry you are dealing with this. I can help check next steps.
+
+Customer: I already tried basic troubleshooting and still need help."
+I want to unsubscribe from emails,other,easy,"Customer: I want to unsubscribe from emails
+
+Agent: I am sorry you are dealing with this. I can help check next steps.
+
+Customer: I already tried basic troubleshooting and still need help."
+Why was my account suspended?,account_access,hard,"Customer: Why was my account suspended?
+
+Agent: I am sorry you are dealing with this. I can help check next steps.
+
+Customer: I already tried basic troubleshooting and still need help."
+The product broke after one use,product_quality,easy,"Customer: The product broke after one use
+
+Agent: I am sorry you are dealing with this. I can help check next steps.
+
+Customer: I already tried basic troubleshooting and still need help."
+The item I received looks different from the website,other,easy,"Customer: The item I received looks different from the website
+
+Agent: I am sorry you are dealing with this. I can help check next steps.
+
+Customer: I already tried basic troubleshooting and still need help."
+Do you restock sold-out items?,other,easy,"Customer: Do you restock sold-out items?
+
+Agent: I am sorry you are dealing with this. I can help check next steps.
+
+Customer: I already tried basic troubleshooting and still need help."
+How do I use this product?,other,easy,"Customer: How do I use this product?
+
+Agent: I am sorry you are dealing with this. I can help check next steps.
+
+Customer: I already tried basic troubleshooting and still need help."
+The size doesn’t fit me,other,easy,"Customer: The size doesn’t fit me
+
+Agent: I am sorry you are dealing with this. I can help check next steps.
+
+Customer: I already tried basic troubleshooting and still need help."
+Is this product authentic?,other,easy,"Customer: Is this product authentic?
+
+Agent: I am sorry you are dealing with this. I can help check next steps.
+
+Customer: I already tried basic troubleshooting and still need help."
+The quality is not as expected,product_quality,easy,"Customer: The quality is not as expected
+
+Agent: I am sorry you are dealing with this. I can help check next steps.
+
+Customer: I already tried basic troubleshooting and still need help."
+Can I get a replacement?,product_quality,easy,"Customer: Can I get a replacement?
+
+Agent: I am sorry you are dealing with this. I can help check next steps.
+
+Customer: I already tried basic troubleshooting and still need help."
+The product is missing parts,other,easy,"Customer: The product is missing parts
+
+Agent: I am sorry you are dealing with this. I can help check next steps.
+
+Customer: I already tried basic troubleshooting and still need help."
+Is there a warranty on this item?,product_quality,easy,"Customer: Is there a warranty on this item?
+
+Agent: I am sorry you are dealing with this. I can help check next steps.
+
+Customer: I already tried basic troubleshooting and still need help."
+Can you recommend a similar product?,other,easy,"Customer: Can you recommend a similar product?
+
+Agent: I am sorry you are dealing with this. I can help check next steps.
+
+Customer: I already tried basic troubleshooting and still need help."
+"This item is out of stock, when will it return?",returns_refunds,easy,"Customer: This item is out of stock, when will it return?
+
+Agent: I am sorry you are dealing with this. I can help check next steps.
+
+Customer: I already tried basic troubleshooting and still need help."
+The product arrived expired,shipping_delivery,easy,"Customer: The product arrived expired
+
+Agent: I am sorry you are dealing with this. I can help check next steps.
+
+Customer: I already tried basic troubleshooting and still need help."
+I received a defective item,product_quality,easy,"Customer: I received a defective item
+
+Agent: I am sorry you are dealing with this. I can help check next steps.
+
+Customer: I already tried basic troubleshooting and still need help."
+Can I get help setting up this product?,other,easy,"Customer: Can I get help setting up this product?
+
+Agent: I am sorry you are dealing with this. I can help check next steps.
+
+Customer: I already tried basic troubleshooting and still need help."
