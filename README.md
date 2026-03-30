@@ -1,7 +1,5 @@
 # LLM Response Eval Pipeline
 
-Pipeline for evaluating LLM outputs—batching prompts, collecting responses, and scoring or comparing them against rubrics, references, or other models.
-
 ## Evaluation guidelines
 
 Use these scales (1 = worst, 5 = best) when reviewing model answers.
