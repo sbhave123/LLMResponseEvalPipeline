@@ -129,7 +129,6 @@ Regenerate summary charts and dashboard-ready exports by **running the analysis 
 
 4. **Category slices are noisy** (*n* is small per bucket). The catch-all **other** topic bucket shows **more Model B wins** in this file; **returns/refunds** and **shipping_delivery** have many **ties**. Do not overfit product decisions to these counts without more data and consistent category definitions.
 
-5. **Safety and formatting (structure)** are documented below as **optional** rubric dimensions but are **not part of the four scored columns**; conclusions about safety or layout are **out of scope** for the numeric aggregates above unless you add them to the sheet.
 
 ---
 
