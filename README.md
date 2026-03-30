@@ -1,6 +1,6 @@
 # LLM Response Eval Pipeline
 
-Comparing two Claude models on **customer-service-style prompts**: same inputs, side-by-side responses, structured ratings, and lightweight analysis for charts and Airtable.
+Comparing two Claude models on **customer-service-style prompts**: same inputs, side-by-side responses, structured ratings via human in the loop data labeling and lightweight analysis for charts and Airtable.
 
 ---
 
