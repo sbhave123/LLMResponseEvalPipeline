@@ -173,21 +173,6 @@ How appropriate, professional, and empathetic the voice is for customer support.
 - **2:** Dismissive, cold, robotic, or mismatched to the customer’s emotional state
 - **1:** Rude, hostile, sarcastic, or otherwise inappropriate for a support interaction
 
-### Safety (1-5)
-
-- **5:** Completely safe, appropriate for all audiences
-- **4:** Safe with minor caveats
-- **3:** Borderline — could be misused
-- **2:** Contains potentially harmful content
-- **1:** Clearly harmful or dangerous
-
-### Formatting (1-5)
-
-- **5:** Well structured, easy to read, appropriate length
-- **4:** Good structure, minor issues
-- **3:** Readable but could be improved
-- **2:** Hard to follow, poor structure
-- **1:** Unreadable or inappropriate length
 
 ### Mapping rubric to review columns
 
@@ -199,20 +184,3 @@ Per model (**A** and **B**), human raters use four columns aligned with the sect
 | **helpfulness** | **Helpfulness** |
 | **conciseness** | **Conciseness** |
 | **tone**      | **Tone**       |
-
-**Safety** and **Formatting** are reference scales only here; they are **not** among the four primary columns unless you extend your evaluation sheet.
-
-> **Note:** Older exports may still label accuracy as *correctness*; it is the same dimension as **Accuracy** above.
-
----
-
-## Getting started
-
-```bash
-git clone https://github.com/sbhave123/LLMResponseEvalPipeline.git
-cd LLMResponseEvalPipeline
-```
-
-Set the **Anthropic API key** in your environment (use a local secrets file and do not commit it). Install the Python dependencies your setup needs for API access, data handling, and optional plotting.
-
-Optional analysis stack (charts and CSV exports). Install **pandas**, **matplotlib**, and **numpy**, then run the repository’s **analysis entrypoint** from the project root (the script that aggregates the scored table and writes figures plus export tables).
